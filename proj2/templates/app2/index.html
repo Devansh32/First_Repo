@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+    <h1>Working properly</h1>
+<h3>/user for user data</h3>
+    <a href="{% url 'app2:users' %}"> see all users </a>
+<h3>/signup for signing up</h3>
+    <a href="{% url 'app2:form_model' %}"> signup </a>
+<h3>/form_page for viewing form </h3>
+    <a href="app2/formpage/"> view form </a>   <!--another way to use urls-->
+<h3>/register for viewing form </h3>
+    <a href="{% url 'app2:register' %}"> register </a>   <!--another way to use urls-->
+<h3>/user_login for logging in </h3>
+    <a href="{% url 'app2:user_login' %}"> login </a>
+</div>
+    </div>
+</body>
+</html>

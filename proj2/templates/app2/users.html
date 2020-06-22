@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title> users </title>
+<!--    if this is declared after extending the base.html , then it will not work-->
+</head>
+{% extends "app2/base.html" %}
+
+{% load myFilters %}
+
+{% block body_blok %}
+<h1> user: </h1>
+{% if users %}
+ <ol>
+
+     {% for i in users %}
+     <li>
+     <ul>
+         <li> {{ i.f_name|cut:'a' }}</li>
+         <li> {{ i.l_name|upper }}</li>
+         <li> {{ i.email }}</li>
+     </ul>
+     </li><br>
+
+     {% endfor %}
+ </ol>
+
+{% endif %}
+
+{% endblock %}
